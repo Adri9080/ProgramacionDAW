@@ -1,4 +1,5 @@
-package tema7;
+package tema7.Persona;
+
 
 public class ClaseMain {
 

@@ -1,4 +1,4 @@
-package tema7;
+package tema7.Persona;
 
 public class Persona {
 
@@ -6,6 +6,7 @@ public class Persona {
 	String nombre;
 	int edad;
 	int estatura;
+	static String DNI;
 	/**
 	 * @param nombre
 	 * @param edad
