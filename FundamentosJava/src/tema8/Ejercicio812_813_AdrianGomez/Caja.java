@@ -7,10 +7,10 @@ package tema8.Ejercicio812_813_AdrianGomez;
 
 public class Caja {
 
-	protected double ancho;
-	protected double alto;
-	protected double fondo;
-	protected String unidad;
+	protected final double ancho;
+	protected final double alto;
+	protected final double fondo;
+	protected final String unidad;
 	protected String etiqueta;
 	
 	/**
@@ -39,15 +39,6 @@ public class Caja {
 		return ancho;
 	}
 
-
-	/**
-	 * @param ancho the ancho to set
-	 */
-	public void setAncho(int ancho) {
-		this.ancho = ancho;
-	}
-
-
 	/**
 	 * @return the alto
 	 */
@@ -55,30 +46,12 @@ public class Caja {
 		return alto;
 	}
 
-
-	/**
-	 * @param alto the alto to set
-	 */
-	public void setAlto(int alto) {
-		this.alto = alto;
-	}
-
-
 	/**
 	 * @return the fondo
 	 */
 	public double getFondo() {
 		return fondo;
 	}
-
-
-	/**
-	 * @param fondo the fondo to set
-	 */
-	public void setFondo(int fondo) {
-		this.fondo = fondo;
-	}
-
 
 	/**
 	 * @return the etiqueta
@@ -93,9 +66,10 @@ public class Caja {
 	 */
 	//Se comprueba que la etiqueta tenga 30 caracteres o menos, en el caso de que no sea asi se devuelve un mensaje de error
 	public void setEtiqueta(String etiqueta) {
-		this.etiqueta = etiqueta;
 		if (etiqueta.length() > 30) {
 			System.out.println("Solo se permiten 30 caractéres");
+		}else {
+			this.etiqueta = etiqueta;
 		}
 		
 	}
@@ -107,14 +81,6 @@ public class Caja {
 		return unidad;
 	}
 
-
-	/**
-	 * @param unidad the unidad to set
-	 */
-	public void setUnidad(String unidad) {
-		this.unidad = unidad;
-	}
-	
 	/**
 	 * @return the volumen
 	 */

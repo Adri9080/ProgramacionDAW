@@ -18,17 +18,16 @@ public class CajaCarton extends Caja{
 	//Contructor, hereda de la clase Caja
 	public CajaCarton(int ancho, int alto, int fondo, String unidad, String etiqueta) {
 		super(ancho, alto, fondo, unidad, etiqueta);
-		// Si la unidad es metros, las medidas se pasaran a centimetros
-		if (this.equals("m")) {
-			this.ancho= ancho * 100;
-			 this.alto=alto * 100;
-			 this.fondo=fondo*100;
-		}
+
 	}
 	
 	//Calcula el 80% de los metros cubicos
 	public double getVolumen() {
-
+		
+		if (this.unidad.equals("m")) {
+			// Si la unidad es metros, las medidas se pasaran a centimetros
+			return ((ancho*100)*(alto*100)*(fondo*100))*0.8;
+		}
 				return (alto * ancho * fondo) * 0.8;
 				
 		}
