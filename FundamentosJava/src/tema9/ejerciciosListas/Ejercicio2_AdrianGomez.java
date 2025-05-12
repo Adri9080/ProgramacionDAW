@@ -33,7 +33,7 @@ public class Ejercicio2_AdrianGomez {
 		System.out.println("Cambiamos el valor de la posicion 2");
 		//Cambio el valor de la posicion 2 por el numero 35, con la funcion set puedes
 		// reemplazar un elemento de la lista por otro pasandole la posicion y el valor que vas a poner
-		numeros.set(1, 35);
+		numeros.set(2, 35);
 		System.out.println(numeros.toString());
 		System.out.println("***********************");
 	}
