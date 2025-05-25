@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * 
  */
-public class Datos {
+public class Datos_AdrianGomez {
 
 	/**
 	 * @param args
@@ -38,14 +38,14 @@ public class Datos {
 		}
 		return null;
 	}
-	public ArrayList<Cliente> guardarDatos(String fichero){
+	public ArrayList<Cliente_AdrianGomez> guardarDatos(String fichero){
 		try (BufferedReader br = new BufferedReader(new FileReader(fichero))){
-			ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
+			ArrayList<Cliente_AdrianGomez> listaClientes = new ArrayList<Cliente_AdrianGomez>();
 			String[] arrayDatos;
 			String linea;
 			while ((linea = br.readLine()) != null) {
 				arrayDatos = linea.split(";");
-				Cliente clienteInsertar = new Cliente(Integer.parseInt(arrayDatos[0]), arrayDatos[1], arrayDatos[2], arrayDatos[3], arrayDatos[4], arrayDatos[5], 
+				Cliente_AdrianGomez clienteInsertar = new Cliente_AdrianGomez(Integer.parseInt(arrayDatos[0]), arrayDatos[1], arrayDatos[2], arrayDatos[3], arrayDatos[4], arrayDatos[5], 
 						arrayDatos[6], arrayDatos[7], arrayDatos[8], arrayDatos[9], arrayDatos[10], arrayDatos[11], Integer.parseInt(arrayDatos[12]), Integer.parseInt(arrayDatos[13]));
 				listaClientes.add(clienteInsertar);
 			}
@@ -61,8 +61,8 @@ public class Datos {
 				+ "TELEFONO,FAX,LINEADIRECCION1,LINEADIRECCION2,CIUDAD,REGION,PAIS,CODIGOPOSTAL,CODIGOEMPLEADOREPVENTAS,LIMITECREDITO) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		try (Connection conn = conectar()){
 			try (PreparedStatement ps = conn.prepareStatement(sql)){
-				ArrayList<Cliente> clientes= guardarDatos("clientes.txt");
-				for (Cliente cliente : clientes) {
+				ArrayList<Cliente_AdrianGomez> clientes= guardarDatos("clientes.txt");
+				for (Cliente_AdrianGomez cliente : clientes) {
 					ps.setInt(1, cliente.getCodigoCliente());
 					ps.setString(2, cliente.getNombreCliente());
 					ps.setString(3, cliente.getNombreContacto());

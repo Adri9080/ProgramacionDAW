@@ -1,6 +1,6 @@
 package tema9.EjercicioMezcla;
 
-public class Cliente {
+public class Cliente_AdrianGomez {
 	private Integer codigoCliente,codigoEmpleadoreVentas,limiteCredito;
 	private String nombreCliente,nombreContacto,apellidoContacto,telefono,fax,
 	lineaDireccion1,lineaDireccion2,ciudad,region,pais,codigoPostal;
@@ -20,7 +20,7 @@ public class Cliente {
 	 * @param pais
 	 * @param codigoPostal
 	 */
-	public Cliente(Integer codigoCliente,  String nombreCliente, String nombreContacto, String apellidoContacto, String telefono, String fax, String lineaDireccion1,
+	public Cliente_AdrianGomez(Integer codigoCliente,  String nombreCliente, String nombreContacto, String apellidoContacto, String telefono, String fax, String lineaDireccion1,
 			String lineaDireccion2, String ciudad, String region, String pais, String codigoPostal, Integer codigoEmpleadoreVentas, Integer limiteCredito) {
 		super();
 		this.codigoCliente = codigoCliente;
